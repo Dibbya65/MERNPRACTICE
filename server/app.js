@@ -40,14 +40,11 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(
-    'mongodb+srv://prakash:prakash6565@cluster0.2xgsb.mongodb.net/places',
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    }
-  )
+  .connect('', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
   .then(() => {
     app.listen(5000);
   })
